@@ -123,6 +123,7 @@ public class ChatbotView extends FrameView {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
+        jTextArea1.setEnabled(false);
         jTextArea1.setName("textArea"); // NOI18N
         jScrollPane1.setViewportView(jTextArea1);
 

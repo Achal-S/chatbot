@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : db.xml
+    Created on : 20 January 2011, 22:51
+    Author     : zerone
+    Description:
+        Purpose of the document follows.
+-->
+
+<root>
+    <states>
+        <state value="0">
+            <response>Was nice talking to your {chatter} person</response>
+            <keywords>
+                <keyword target-state="-1">exit</keyword>
+            </keywords>
+        </state>
+        <state value="1">
+            <response>How are you today?</response>
+            <keywords>
+                <keyword target-state="0">bye</keyword>
+                <keyword target-state="2">very sad</keyword>
+                <keyword target-state="3">happy</keyword>
+                <keyword target-state="2">not happy</keyword>
+                <keyword target-state="3">good</keyword>
+                <keyword target-state="4">cold</keyword>
+            </keywords>
+        </state>
+        <state value="2">
+            <response>What is wrong?</response>
+            <keywords>
+                <keyword target-state="0">bye</keyword>
+                <keyword target-state="5">bored</keyword>
+            </keywords>
+        </state>
+        <state value="3">
+            <response>Glad to hear it! Why are you so happy?</response>
+            <keywords>
+                <keyword target-state="0">bye</keyword>
+                <keyword target-state="6">lottery</keyword>
+            </keywords>
+        </state>
+        <state value="4">
+            <response>Would you like to know the weather tomorrow?</response>
+            <keywords>
+                <keyword target-state="forecast">yes</keyword>
+                <keyword target-state="7">no</keyword>
+            </keywords>
+        </state>
+        <state value="5">
+            <response>Do you have any hobbies?</response>
+            <keywords>
+            </keywords>
+        </state>
+        <state value="6">
+            <response>Wow that is amazing!</response>
+            <keywords>
+            </keywords>
+        </state>
+        <state value="7">
+            <response>So what else is up?</response>
+            <keywords>
+            </keywords>
+        </state>
+
+    </states>
+</root>
