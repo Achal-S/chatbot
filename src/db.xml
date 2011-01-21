@@ -10,10 +10,14 @@
 
 <root>
     <states>
+        <state value="-1">
+            <response>huh? I didn't understand that!</response>
+            <keyword target-state="1">exit</keyword>
+        </state>
         <state value="0">
-            <response>Was nice talking to your {chatter} person</response>
+            <response>Was nice talking to you {chatter} </response>
             <keywords>
-                <keyword target-state="-1">exit</keyword>
+                <keyword target-state="1">exit</keyword>
             </keywords>
         </state>
         <state value="1">
@@ -61,6 +65,7 @@
         <state value="7">
             <response>So what else is up?</response>
             <keywords>
+                <keyword target-state="5">nothing</keyword>
             </keywords>
         </state>
 

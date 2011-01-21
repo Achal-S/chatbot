@@ -80,6 +80,8 @@ public class ChatbotView extends FrameView {
                 }
             }
         });
+
+        myInit();
     }
 
     @Action
@@ -284,6 +286,14 @@ public class ChatbotView extends FrameView {
         String history = jTextArea1.getText();
         if(history.length()>0)
             history += "\n";
-        jTextArea1.setText(history + "Bot: " + this.brain.speak(message));
+        this.brain.process(message);
+        jTextArea1.setText(history + "Bot: " + this.brain.getResponse());
+    }
+
+    public void myInit(){
+        String history = jTextArea1.getText();
+        if(history.length()>0)
+            history += "\n";
+        jTextArea1.setText(history + "Bot: " + this.brain.getResponse());
     }
 }
