@@ -16,10 +16,12 @@ public class BotBrain {
 
     private HashMap memory = new HashMap();
     private PersistanceHandler ph = new PersistanceHandler();
-    private ArrayList<BotState> states;
+    private HashMap<String, BotState> states = null;
+    private WeatherApiClient weatherClient = new WeatherApiClient();
+    private int state = 1;
 
     public BotBrain(){
-        
+        this.states = ph.getStates();
     }
 
     public String speak(String message){
