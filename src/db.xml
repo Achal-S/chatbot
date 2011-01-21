@@ -27,8 +27,8 @@
                 <keyword target-state="2">very sad</keyword>
                 <keyword target-state="3">happy</keyword>
                 <keyword target-state="2">not happy</keyword>
-                <keyword target-state="3">good</keyword>
                 <keyword target-state="4">cold</keyword>
+                <keyword target-state="11">/.*good.*/</keyword>
             </keywords>
         </state>
         <state value="2">
@@ -43,6 +43,7 @@
             <keywords>
                 <keyword target-state="0">bye</keyword>
                 <keyword target-state="6">lottery</keyword>
+                <keyword target-state="4">*</keyword>
             </keywords>
         </state>
         <state value="4">
@@ -66,6 +67,34 @@
             <response>So what else is up?</response>
             <keywords>
                 <keyword target-state="5">nothing</keyword>
+            </keywords>
+        </state>
+        <state value="8">
+            <response>Hi {chatter}</response>
+            <keywords>
+                <keyword target-state="9">*</keyword>
+            </keywords>
+        </state>
+        <state value="9">
+            <response>What is your name?</response>
+            <keywords>
+                <keyword target-state="10">my name is ([\w]{0,30})#chatter#</keyword>
+                <keyword target-state="10">i am ([\w]{0,30})#chatter#</keyword>
+                <keyword target-state="10">([\w]{0,30})#chatter#</keyword>
+            </keywords>
+        </state>
+        <state value="10">
+            <response>Nice to meet you {chatter}</response>
+            <keywords>
+                <keyword target-state="1">*</keyword>
+
+            </keywords>
+        </state>
+        <state value="11">
+            <response>Glad to hear that {chatter}, I am good too</response>
+            <keywords>
+                <keyword target-state="4">*</keyword>
+
             </keywords>
         </state>
 
